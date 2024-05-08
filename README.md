@@ -48,7 +48,7 @@ Setup:
         --runtime python3.9 \
         --handler lambda_triggered_by_s3.lambda_handler \
         --role <arn of Lambda Execution Role>
-        --environment "Variables={S3_BUCKET_NAME=pashtun2,SNS_TOPIC_ARN=<arn of SNS topic>}" \
+        --environment "Variables={S3_BUCKET_NAME=<name of s3 bucket>,SNS_TOPIC_ARN=<arn of SNS topic>}" \
         --zip-file fileb://lambda_triggered_by_s3.zip
 
 9) Add permissions to allow the S3 bucket to invoke your Lambda 
